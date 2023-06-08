@@ -17,6 +17,8 @@ python manage.py runserver
 ```
 
 # flask is easy
+
+installation
 ```
 pip3 install Flask
 mkdir myproject 
