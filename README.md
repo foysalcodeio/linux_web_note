@@ -1,3 +1,11 @@
+github : again push method
+```
+[keep in mind you must stay on the main branch]
+1. git add .
+2. git commit -m "project done"
+3. git push
+```
+
 How to run and compile c++
 ```
 vim test.cpp
