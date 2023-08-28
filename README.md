@@ -1,9 +1,26 @@
+
+linux xoss utilies : ncdu, ranger, bpytop, ascii-image-converter[ascii-image-converter main.png --color], speedtest, lolcat
+
+
 github : again push method
 ```
 [keep in mind you must stay on the main branch]
 1. git add .
 2. git commit -m "project done"
 3. git push
+```
+lock problem:
+```
+sudo killall apt apt-get
+
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+sudo dpkg --configure -a
+sudo apt update
+or
+
+https://www.edureka.co/community/42504/error-dpkg-frontend-is-locked-by-another-process
 ```
 
 How to run and compile c++
@@ -91,6 +108,13 @@ export GOPATH=$HOME/work
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 source ~/.profile
 go version
+```
+
+java configaration:
+```
+sudo apt install openjdk-11-jdk
+don't know: sudo update-alternatives --config java
+sudo sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-*openjdk/accessibility.properties
 ```
 
 vmware workstation ubuntu full screen problem
