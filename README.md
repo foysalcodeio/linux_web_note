@@ -1,5 +1,17 @@
 
-linux xoss utilies : ncdu, ranger, bpytop, ascii-image-converter[ascii-image-converter main.png --color], speedtest, lolcat
+linux xoss utilies : 
+```
+ncdu, ranger, bpytop, ascii-image-converter[ascii-image-converter main.png --color], speedtest, lolcat
+lazygit
+lazyvim
+ripgrep - shortcut -> rg
+bad - arrange line code,
+fzf - searching file or somethingelse
+entr - texteditor
+mc - texteditor
+fish - shell
+
+```
 
 
 github : again push method
