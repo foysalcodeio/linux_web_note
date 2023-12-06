@@ -10,6 +10,7 @@ fzf - searching file or somethingelse
 entr - texteditor
 mc - texteditor
 fish - shell
+fd installation : cargo install fd-find
 
 ```
 
