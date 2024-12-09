@@ -11,6 +11,7 @@ entr - texteditor
 mc - texteditor
 fish - shell
 fd installation : cargo install fd-find
+free and vmstat - memory and pc performence checkup
 
 ```
 
