@@ -145,3 +145,82 @@ Add following lines to the end of the [Unit] section
 sudo systemctl daemon-reload
 sudo service open-vm-tools restart
 ```
+
+# Linux Performance Monitoring Guide
+
+A collection of command-line tools to monitor and troubleshoot system performance in Linux.
+
+---
+
+## Table of Contents
+- [Introduction](#introduction)
+- [CPU Monitoring](#cpu-monitoring)
+- [Memory Monitoring](#memory-monitoring)
+- [Disk I/O Monitoring](#disk-io-monitoring)
+- [Network Monitoring](#network-monitoring)
+- [Processes and System Logs](#processes-and-system-logs)
+- [Hardware Monitoring](#hardware-monitoring)
+- [Comprehensive Monitoring Tools](#comprehensive-monitoring-tools)
+- [Installation Instructions](#installation-instructions)
+
+---
+
+## Introduction
+This guide provides a list of essential tools for monitoring system performance on Linux. Each tool has been categorized for specific purposes like CPU, memory, disk, network, and hardware monitoring.
+
+---
+
+## CPU Monitoring
+- **`top`**: Displays real-time CPU usage and process details.
+- **`htop`**: Enhanced, interactive version of `top`.
+- **`mpstat`**: Provides CPU usage statistics.
+
+---
+
+## Memory Monitoring
+- **`free`**: Shows memory usage statistics.
+- **`vmstat`**: Provides details on memory, CPU, and system performance.
+
+---
+
+## Disk I/O Monitoring
+- **`iotop`**: Monitors real-time disk I/O usage by processes.
+- **`iostat`**: Offers detailed CPU and disk statistics.
+- **`df`**: Reports disk space usage for filesystems.
+- **`du`**: Displays the size of directories and files.
+
+---
+
+## Network Monitoring
+- **`iftop`**: Monitors real-time network bandwidth usage.
+- **`nload`**: Visualizes network traffic.
+- **`ss`**: Displays open ports and network statistics.
+
+---
+
+## Processes and System Logs
+- **`ps`**: Shows running processes.
+- **`journalctl`**: Manages and views system logs.
+- **`lsof`**: Lists open files and their associated processes.
+
+---
+
+## Hardware Monitoring
+- **`sensors`**: Displays hardware temperature and fan speeds.
+- **`uptime`**: Shows system uptime and load averages.
+
+---
+
+## Comprehensive Monitoring Tools
+- **`nmon`**: A complete system performance monitoring tool.
+- **`glances`**: A versatile monitoring tool with web interface support.
+
+---
+
+## Installation Instructions
+Most tools can be installed using the package manager available in your Linux distribution. Below are commands specific to Arch Linux:
+
+```bash
+# General monitoring tools
+sudo pacman -S htop iotop iftop nload sysstat glances nmon lm_sensors
+
