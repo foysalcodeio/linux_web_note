@@ -119,7 +119,7 @@ apt, bash, firefox[cache, cookie], system[broken Desktop file]
 go install
 ```
 cd ~
-curl -O https://dl.google.com/go/go1.15.1.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz
 tar xvf go1.*.linux-amd64.tar.gz
 sudo mv go /usr/local
 sudo nano ~/.profile
