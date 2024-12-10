@@ -15,6 +15,11 @@ free and vmstat - memory and pc performence checkup
 
 ```
 
+terminal emulator options
+```
+sudo update-alternatives --config x-terminal-emulator
+```
+
 
 github : again push method
 ```
