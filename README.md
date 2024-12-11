@@ -41,6 +41,10 @@ or
 
 https://www.edureka.co/community/42504/error-dpkg-frontend-is-locked-by-another-process
 ```
+if pip package install would be something wrong
+```
+pip3 install -r requirements.txt --break-system-packages
+```
 
 How to run and compile c++
 ```
