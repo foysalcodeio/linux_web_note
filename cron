@@ -1,0 +1,26 @@
+crontab - cron jobs automated repetitive tasks, ensuring they run at scheduled times without manual intervention
+:: It's execute fixed time & it's set the location where the file/code execute
+Ex: Backing up files, runnnig system or sending email reports
+status check
+systemctl status cron
+manage - Edit : crontab -e, view : crontab -l, delete : crontab -r
+
+details : https://crontab.guru/#5_4_1_5_2
+
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                       7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *  command_to_execute
+
+###### Sample crontab ######
+
+# Empty temp folder every Friday at 5pm
+0 5 * * 5 rm -rf /tmp/*
+
+# Backup images to Google Drive every night at midnight
+0 0 * * * rsync -a ~/Pictures/ ~/Google\ Drive/Pictures/
