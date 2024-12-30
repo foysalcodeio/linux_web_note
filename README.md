@@ -85,21 +85,7 @@ sed = edit input stream
 awk = general purpose test processing language
 uniq = remove duplicate lines
 ```
-TMUX
-```
-  s -> list session
-	$ -> rename current session
-	d -> detech from current session
-	c -> new windows
-	w -> list windows
-	% -> split horizentally
-	" -> split vertically
-	q -> show the panel number
-	} -> swap next panel
-	{ -> swap preview panel
-	c-uparraow -> screen larger
-	c-downarrow -> screen smaller
-```
+
 COMMAND LINE [only read n number]
 ```
 cat access.log | tail -n 5
