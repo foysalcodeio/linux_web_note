@@ -97,6 +97,8 @@ TMUX
 	q -> show the panel number
 	} -> swap next panel
 	{ -> swap preview panel
+	c-uparraow -> screen larger
+	c-downarrow -> screen smaller
 ```
 COMMAND LINE [only read n number]
 ```
