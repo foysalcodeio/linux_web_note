@@ -1,0 +1,72 @@
+apropos sudo
+
+What is the index number of the "sudoers" file in the "/etc" directory?
+ls -i /etc/sudoers
+
+
+
+find
+-----
+find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null
+
+locate *.conf
+
+How many files exist on the system that have the “.bak” extension?
+find / -type f -name *.bak -exec ls -all {} \; 2>/dev/null
+
+
+not execute :  find /etc/ -name shadow
+add 2>/dev/null
+execute :  find /etc/ -name shadow 2>/dev/null
+get & write result : find /etc/ -name shadow 2>/dev/null > results.txt
+
+
+Redirect STDOUT and STDERR to Separate Files
+find /etc/ -name shadow 2> stderr.txt 1> stdout.txt
+
+Redirect STDOUT and Append to a File
+find /etc/ -name passwd >> stdout.txt 2>/dev/null
+
+
+Redirect STDIN Stream to a File
+cat << EOF > stream.txt
+
+Pipes
+find /etc/ -name *.conf 2>/dev/null | grep systemd
+
+
+How many files exist on the system that have the “.log” file extension?
+find / -type f -name *.log -exec ls -all {} \; 2>/dev/null
+
+
+How many total packages are installed on the target system?
+apt list --installed | grep -c "installed"
+
+more,less,head,tail,
+
+sort
+cat /etc/passwd | sort
+cat /etc/passwd | grep "/bin/bash"
+cat /etc/passwd | grep -v "false\|nologin"
+cat /etc/passwd | grep -v "false\|nologin" | cut -d":" -f1
+cat /etc/passwd | grep -v "false\|nologin" | tr ":" " "
+
+cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t
+cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}'
+cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}' | sed 's/bin/HTB/g'
+
+How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)
+ss -l -4 | grep -v "127.0.0.1" | grep "LISTEN" | wc -l
+or
+netstat -l | grep LISTEN | grep -v localhost | grep 0.0.0.0
+
+
+Determine what user the ProFTPd server is running under. Submit the username as the answer.
+ps aux | grep proftpd
+
+Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer.
+curl https://www.inlanefreight.com/ | tr " " "\n" | grep -oE 'https://www.inlanefreight.com/([^"#]+)' | sort -u | wc -l
+
+
+grep -oE ➡ The -o flag means to print only the matching characters, and not the full line. And the flag E means that it will allow us to use RegEx (Regular Expression) in this.
+([^"#]+) ➡ This a regular expression which means, do not print " or # in the urls, but print and anything after it (full url).
