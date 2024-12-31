@@ -42,6 +42,12 @@ install check with background run
 # Backup images to Google Drive every night at midnight
 0 0 * * * rsync -a ~/Pictures/ ~/Google\ Drive/Pictures/
 
+# web backup
+sudo crontab -u www-data -e
+0 3 * * * /usr/local/bin/website_backup.sh
+
+
+
 
 
 
