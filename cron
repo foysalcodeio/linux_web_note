@@ -6,6 +6,23 @@ systemctl status cron
 manage - Edit : crontab -e, view : crontab -l, delete : crontab -r
 
 details : https://crontab.guru/#5_4_1_5_2
+crontab generator : https://crontab-generator.org/
+
+prepared to edit:
+	sudo crontab -u root -e
+
+* * * * * apt install -y tmux
+
+check run list
+sudo crontab -u root -l
+
+install check with background run
+	which tmux
+	sudo cat /var/log/syslog | grep cron
+	sudo cat /var/log/syslog | grep CRON
+
+
+
 
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
@@ -24,3 +41,8 @@ details : https://crontab.guru/#5_4_1_5_2
 
 # Backup images to Google Drive every night at midnight
 0 0 * * * rsync -a ~/Pictures/ ~/Google\ Drive/Pictures/
+
+
+
+
+
