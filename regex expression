@@ -1,0 +1,56 @@
+Regular expresion
+grep -E "(my|false)" /etc/passwd
+grep -E "(my.*false)" /etc/passwd # it's .* similiar like and operator
+grep -E "my" /etc/passwd | grep -E "false"
+
+.* = working && operator
+
+
+
+Here are some optional tasks to practice regex that can help us to handle it better and more efficiently. For all exercises, we will use the /etc/ssh/sshd_config file on our Pwnbox instance.
+
+1	Show all lines that do not contain the '#' character.
+Ans: ' ^[^#]*$ '
+Explain:
+ - '^' matches the beginning of a line.
+ - ' [^#]* ' matches any sequence of characters that does not include #.
+ - ' $ ' matches the end of a line.
+
+2	Search all lines that contain a word that starts with 'Permit'.
+Ans : ' \bPermit\w* '
+Explain:
+  - ' \b ' asserts a word boundary.
+  - ' Permit ' matches the literal word "Permit".
+  - ' \w* ' matches zero or more word characters after "Permit".
+
+
+3	Search all lines that contain a word ending with 'Authentication'.
+Ans : ' \b\w*Authentication\b '
+Explain:
+  - ' \b ' asserts word boundaries at the start and end.
+  - ' \w* ' matches zero or more word characters before "Authentication".
+  - ' Authentication ' matches the literal text.
+
+4	Search all lines containing the word 'Key'.
+Ans: ' \bKey\b '
+
+5	Search all lines beginning with 'Password' and containing 'yes'.
+Ans: ' ^Password.*\byes\b '
+Explain:
+  - '^' matches the beginning of a line.
+  - 'Password' matches the literal text "Password".
+  - '.*' matches any sequence of characters.
+  - ' \byes\b ' matches the word "yes".
+
+6	Search all lines that end with yes.
+Ans: ' yes\.$ '
+Explain:
+  - ' yes ' matches the literal text "yes".
+  - ' \. ' matches the period (escaped because . is a special character).
+  - ' $ ' matches the end of a line.
+
+
+
+
+
+
