@@ -1,2 +1,27 @@
 We can also set the permissions for all other users to read only using the octal value assignment.
 
+cry0l1t3@htb[/htb]$ chmod 754 shell && ls -l shell
+-rwxr-xr--   1 cry0l1t3 htbteam 0 May  4 22:12 shell
+
+permission management
+--------------------
+Binary Notation:                4 2 1  |  4 2 1  |  4 2 1
+----------------------------------------------------------
+Binary Representation:          1 1 1  |  1 0 1  |  1 0 0
+----------------------------------------------------------
+Octal Value:                      7    |    5    |    4
+----------------------------------------------------------
+Permission Representation:      r w x  |  r - x  |  r - -
+
+
+Change Owner
+syntax : cry0l1t3@htb[/htb]$ chown <user>:<group> <file/directory>
+command : cry0l1t3@htb[/htb]$ chown root:root shell && ls -l shell
+          -rwxr-xr--   1 root root 0 May  4 22:12 shell
+
+SUID & SGID
+most important : https://gtfobins.github.io/#+reverse%20shell
+
+
+
+
